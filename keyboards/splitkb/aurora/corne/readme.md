@@ -1,6 +1,11 @@
 ![Aurora Corne](https://i.imgur.com/t4EQ77Lh.jpg)
 
+    HOW TO BUILD & FLASH:
+
+    qmk compile -kb splitkb/aurora/corne -km custom && qmk flash -kb splitkb/aurora/corne -km custom
+
 # Aurora Corne
+
 The Aurora Corne is a redesign by splitkb.com of the popular Corne keyboard (also known as the crkbd or the Helidox) by Foostan.
 
 Keyboard Maintainer: [splitkb.com](https://github.com/splitkb)  
@@ -18,6 +23,7 @@ Example of flashing this keyboard:
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
 ## Bootloader
+
 You can enter the bootloader in 3 ways:
 
 * **Physical reset button**: Briefly press the button on the side of the PCB, next to the TRRS socket.
@@ -25,19 +31,21 @@ You can enter the bootloader in 3 ways:
 * **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available.
 
 # Assembly
+
 A build guide for the entire Aurora series will become available soon at [docs.splitkb.com](https://docs.splitkb.com).
 
 # Features
+
 The Aurora Corne supports the following features:
 
-- Support for MX or Kailh Choc (v1 sold at splitkb.com, not v2) switches;
-- Top mounted controllers for a lower profile;
-- Up to two 128×32 pixel OLED displays;
-- Up to one EC11 rotary encoders per half in one of two possible positions;
-- Per-key RGB backlight by individual RGB LEDs;
-- Underglow by individual RGB LEDs;
-- Support for a power switch for wireless controllers;
-- Support for the splitkb.com tenting puck.
+* Support for MX or Kailh Choc (v1 sold at splitkb.com, not v2) switches;
+* Top mounted controllers for a lower profile;
+* Up to two 128×32 pixel OLED displays;
+* Up to one EC11 rotary encoders per half in one of two possible positions;
+* Per-key RGB backlight by individual RGB LEDs;
+* Underglow by individual RGB LEDs;
+* Support for a power switch for wireless controllers;
+* Support for the splitkb.com tenting puck.
 
 # What is the Aurora Series?
 

@@ -1,11 +1,11 @@
-    This is a personal fork of the _QMK Firmware_ repository, it only contains
+    This is a personal fork of the QMK Firmware repository, it only contains
     my personal keyboards & keymaps. You should probably clone the official
-    repository if you need _QMK_.
+    repository if you need QMK.
     
     Modified/Added keyboards:
 
-    * handwired/scotto9 (added)
-    * splitkb/aurora/corne (modified)
+    * handwired/scotto9 (new)
+    * splitkb/aurora/corne (added custom layout)
 
 # Quantum Mechanical Keyboard Firmware
 

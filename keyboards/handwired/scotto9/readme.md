@@ -1,10 +1,8 @@
-# handwired/scotto9
-
-HOW TO BUILD & FLASH:
+    HOW TO BUILD & FLASH:
 
     qmk compile -kb handwired/scotto9 -km default && qmk flash -kb handwired/scotto9 -km default
 
-    qmk compile -kb handwired/scotto9 -km json && qmk flash -kb handwired/scotto9 -km json
+# handwired/scotto9
 
 ![handwired/scotto9](imgur.com image replace me!)
 
