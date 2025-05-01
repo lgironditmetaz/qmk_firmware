@@ -46,12 +46,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
+
 #if defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 };
 #endif
 
+static uint32_t key_timer = 0;
+
+bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
+    return timer_elapsed32(key_timer) > 150; // Idle typing time required prior to combo activation to avoid misfires
+}
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    key_timer = timer_read32();
+
     if (record->event.pressed) {
         switch (keycode) {
             case QK_MACRO_0:
