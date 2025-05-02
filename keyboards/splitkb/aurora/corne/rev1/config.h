@@ -26,4 +26,4 @@
 #    define SPLIT_OLED_ENABLE
 #endif
 
-#define COMBO_SHOULD_TRIGGER
+// #define COMBO_SHOULD_TRIGGER

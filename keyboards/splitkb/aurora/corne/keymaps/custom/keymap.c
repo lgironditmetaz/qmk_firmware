@@ -3,21 +3,21 @@
 #    include "keymap.h"
 #endif
 
-const uint16_t PROGMEM combo_left_parenthesis[] = {KC_U, KC_I, COMBO_END};
-const uint16_t PROGMEM combo_right_parenthesis[] = {KC_I, KC_O, COMBO_END};
-const uint16_t PROGMEM combo_left_bracket[] = {RGUI_T(KC_J), LALT_T(KC_K), COMBO_END};
-const uint16_t PROGMEM combo_right_bracket[] = {LALT_T(KC_K), RCTL_T(KC_L), COMBO_END};
-const uint16_t PROGMEM combo_left_square_bracket[] = {KC_M, KC_COMM, COMBO_END};
-const uint16_t PROGMEM combo_right_square_bracket[] = {KC_COMM, KC_DOT, COMBO_END};
+// const uint16_t PROGMEM combo_left_parenthesis[] = {KC_U, KC_I, COMBO_END};
+// const uint16_t PROGMEM combo_right_parenthesis[] = {KC_I, KC_O, COMBO_END};
+// const uint16_t PROGMEM combo_left_bracket[] = {RGUI_T(KC_J), LALT_T(KC_K), COMBO_END};
+// const uint16_t PROGMEM combo_right_bracket[] = {LALT_T(KC_K), RCTL_T(KC_L), COMBO_END};
+// const uint16_t PROGMEM combo_left_square_bracket[] = {KC_M, KC_COMM, COMBO_END};
+// const uint16_t PROGMEM combo_right_square_bracket[] = {KC_COMM, KC_DOT, COMBO_END};
 
-combo_t key_combos[] = {
-    COMBO(combo_left_parenthesis, KC_5),
-    COMBO(combo_right_parenthesis, KC_MINS),
-    COMBO(combo_left_bracket, QK_MACRO_0),
-    COMBO(combo_right_bracket, QK_MACRO_1),
-    COMBO(combo_left_square_bracket, QK_MACRO_2),
-    COMBO(combo_right_square_bracket, QK_MACRO_3),
-};
+// combo_t key_combos[] = {
+//     COMBO(combo_left_parenthesis, KC_5),
+//     COMBO(combo_right_parenthesis, KC_MINS),
+//     COMBO(combo_left_bracket, QK_MACRO_0),
+//     COMBO(combo_right_bracket, QK_MACRO_1),
+//     COMBO(combo_left_square_bracket, QK_MACRO_2),
+//     COMBO(combo_right_square_bracket, QK_MACRO_3),
+// };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
@@ -52,14 +52,14 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 };
 #endif
 
-static uint32_t key_timer = 0;
+// static uint32_t key_timer = 0;
 
-bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
-    return timer_elapsed32(key_timer) > 150; // Idle typing time required prior to combo activation to avoid misfires
-}
+// bool combo_should_trigger(uint16_t combo_index, combo_t *combo, uint16_t keycode, keyrecord_t *record) {
+//     return timer_elapsed32(key_timer) > 150; // Idle typing time required prior to combo activation to avoid misfires
+// }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    key_timer = timer_read32();
+    // key_timer = timer_read32();
 
     if (record->event.pressed) {
         switch (keycode) {
