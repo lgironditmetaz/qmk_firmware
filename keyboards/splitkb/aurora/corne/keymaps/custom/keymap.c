@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [2] = LAYOUT_split_3x6_3(
         KC_TAB,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,           KC_MINS,         KC_7,           KC_8,            KC_9,            KC_0,            KC_BSPC,
         KC_LCTL, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI, QK_MACRO_0,     QK_MACRO_1,      RGUI_T(KC_EQL), LALT_T(KC_LBRC), RCTL_T(KC_RBRC), RSFT_T(KC_BSLS), KC_GRV,
-        KC_LSFT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   QK_MACRO_2,     QK_MACRO_3,      KC_6,           KC_NO,           KC_NO,           KC_NO,           KC_TILD,
+        KC_LSFT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   QK_MACRO_2,     QK_MACRO_3,      QK_MACRO_4,     QK_MACRO_5,      KC_NO,           KC_6,            KC_TILD,
                                    KC_LGUI, KC_TRNS, LSFT_T(KC_SPC), RSFT_T(KC_BSPC), MO(3),          KC_RALT
     ),
     [3] = LAYOUT_split_3x6_3(
@@ -74,6 +74,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 return false;
             case QK_MACRO_3:
                 SEND_STRING(SS_DOWN(X_LALT)SS_DOWN(X_LSFT)SS_TAP(X_MINS)SS_UP(X_LALT)SS_UP(X_LSFT));
+                return false;
+            case QK_MACRO_4:
+                SEND_STRING(SS_TAP(X_EQL)SS_DOWN(X_LSFT)SS_TAP(X_GRV)SS_UP(X_LSFT));
+                return false;
+            case QK_MACRO_5:
+                SEND_STRING(SS_TAP(X_SLSH)SS_DOWN(X_LSFT)SS_TAP(X_GRV)SS_UP(X_LSFT));
                 return false;
         }
     }
